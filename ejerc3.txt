@@ -1,0 +1,30 @@
+// ConsoleApplication2.cpp : main project file.
+
+#include"stdafx.h"
+#include<iostream>
+#include<conio.h>
+#include<locale.h>
+using namespace System;
+using namespace std;
+
+int main();
+
+{
+
+      setlocale(LC_ALL, "spanish");
+      int x, y, z;
+      cout << "Introduzca el capital de Michael" << "\n";
+      cin >> x;
+      cout << "Introduzca el capital de Efraín" << "\n";
+      cin >> y;
+	  cout << "Introduzca el capital de Even" << "\n";
+cin >> z;
+int a = 100.x / x + y + z;
+int b = 100.y / x + y + z;
+int c= 100.y / x + y + z;
+cout << "El porcentaje d Michael es: ", a;
+cout << "El porcentaje d Efraín es: ", y;
+cout << "El porcentaje d Even es: ", c;
+_getch();
+return 0
+}

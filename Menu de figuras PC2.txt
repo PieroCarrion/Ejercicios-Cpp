@@ -1,0 +1,117 @@
+#include "stdafx.h"
+#include <iostream>
+#include <conio.h>
+
+using namespace System;
+using namespace std;
+
+void cuadrado(int *n);
+void rectangulo(int *largo, int *ancho);
+void triangulo(int *altura);
+void rombo(int *diagonal);
+void menu(int opcion)
+{
+	int lado, largo, diagonal, altura;
+	do
+	{
+		cout << "Seleccione una figura" << endl;
+		cout << "1)Cuadrado" << endl;
+		cout << "2)Rectangulo" << endl;
+		cout << "3)Triangulo" << endl;
+		cout << "4)Rombo" << endl;
+		cout << "Seleccione una opcion" << endl; cin >> opcion;
+	} while (opcion<1 || 4<opcion);
+	switch (opcion)
+	{
+	case 1:cout << "Ingrese lado: "; cin >> lado;
+		cuadrado(&lado);
+		break;
+	case 2:cout << "Ingrese ancho: "; cin >> lado;
+		cout << "Ingrese largo: "; cin >> largo;
+		rectangulo(&largo, &lado);
+		break;
+	case 3:cout << "Ingrese altura: ", cin >> altura;
+		triangulo(&altura);
+		break;
+	case 4:cout << "Ingrese la diagonal: ", cin >> diagonal;
+		rombo(&diagonal);
+		break;
+	default:exit(0);
+		break;
+	}
+	
+}
+int main()
+{
+	int opcion;
+	menu(opcion);
+	return 0;
+}
+void cuadrado(int *n)
+{
+	system("cls");
+	for (int i = 1; i <= *n; i++)
+	{
+		for (int j = 1; j <= *n; j++)
+		{
+			Console::SetCursorPosition(i, j);
+			cout << "*";
+		}
+
+		cout << endl;
+	}
+	getch();
+}
+void rectangulo(int *largo, int *ancho)
+{
+	system("cls");
+	for (int i = 1; i <= *largo; i++)
+	{
+		for (int j = 1; j <= *ancho; j++)
+		{
+			Console::SetCursorPosition(i, j);
+			cout << "*";
+		}
+		cout << endl;
+	}
+	getch();
+}
+void triangulo(int *altura)
+{
+	system("cls");
+	for (int i = 1; i <= *altura; i++)
+	{
+		for (int j = 1; j <= *altura - i; j++)
+		{
+			cout << " ";
+		}
+		for (int j = 1; j <= 2 * i - 1; j++)
+		{
+			cout << "*";
+		}
+		cout << endl;
+	}
+	getch();
+}
+void rombo(int *diagonal)
+{
+	system("cls");
+	for (int j = 0; j < *diagonal; ++j) 
+	{
+		for (int i = 0; i < *diagonal - j - 1; ++i)
+			cout << " ";
+		for (int i = 0; i < 2 * j + 1; ++i)
+			cout << "*";
+		cout << endl;
+	}
+	for (int j = *diagonal - 2; j >= 0; --j) 
+	{
+		for (int i = 0; i<*diagonal - j - 1; ++i)
+			cout << " ";
+		for (int i = 0; i<2 * j + 1; ++i)
+			cout << "*";
+		cout << endl;
+	}
+	
+	getch();
+}

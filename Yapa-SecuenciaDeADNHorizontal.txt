@@ -1,0 +1,54 @@
+
+#include "stdio.h"
+#include "conio.h"
+#include "iostream"
+
+
+using namespace std;
+
+int main()
+{
+	int n,cantidad,espacios,num=1;
+	cout<<"Ingrese n: "; //Validar n de 1 a 6
+	cin>>n;
+	espacios=n*2-3;
+
+	for (int i = 0; i < n*2-1; i++,cout<<"\n")
+	{
+		for (int k = 0; k < n; k++)
+		{
+			for (int j = 0; j < n*2-1; j++)
+			{
+				if(i<n)
+				{
+					if(j==cantidad || j==espacios+1 || j==0 || j==n*2-2)
+						cout<<char(126);
+					else
+						cout<<" ";
+				}
+				else if(i>=n)
+				{
+					if(j==cantidad || j==espacios+1 || j==0 || j==n*2-2)
+						cout<<char(126);
+					else
+						cout<<" ";
+				}			
+			}
+		}
+		if (i<n-1) 
+		{
+			cantidad++;
+			espacios--;
+			num++;
+		}
+		else 
+		{
+			cantidad--;
+			espacios++;
+			num--;
+		}
+	}
+
+	_getch();
+
+}

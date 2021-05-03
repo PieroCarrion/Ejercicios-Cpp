@@ -1,0 +1,88 @@
+
+#include "stdio.h"
+#include "conio.h"
+#include "iostream"
+
+
+using namespace std;
+
+int main()
+{
+	int n;
+	int espacios;
+	int cantidad;
+	int num;
+	int Paridad;
+	cout<<"Ingrese n: ";
+	cin>>n;
+	espacios=n-1;
+
+	do{
+		cout<<"Ingrese si es par(0) o impar(1): ";
+		cin>>Paridad;
+	}while(Paridad != 0 && Paridad != 1);
+
+	for (int i = 0; i < n*2; i++,cout<<"\n",num=0)
+	{
+		for (int j = 0; j < n+cantidad; j++)
+		{
+			if(j<espacios)
+				cout<<"  ";
+			else
+			{
+				if(j<n)
+					num++;
+				else
+					num--;
+
+				if(num<10)
+				{
+					if(Paridad==0)
+					{
+						if(num%2==0)
+							cout<<" "<<num;
+						else
+							cout<<"  ";
+					}
+					else
+					{
+						if(num%2!=0)
+							cout<<" "<<num;
+						else
+							cout<<"  ";
+					}
+				}
+				else 
+				{
+					if(Paridad==0)
+					{
+						if(num%2==0)
+							cout<<num;
+						else
+							cout<<"  ";
+					}
+					else
+					{
+						if(num%2!=0)
+							cout<<num;
+						else
+							cout<<"  ";
+					}
+				}
+			}
+		}
+		if(i<n-1)
+		{
+			cantidad++;
+			espacios--;
+		}
+		else
+		{
+			cantidad--;
+			espacios++;
+		}
+	}
+
+	_getch();
+
+}

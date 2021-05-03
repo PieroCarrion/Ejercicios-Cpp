@@ -1,0 +1,24 @@
+#include "stdafx.h"           
+#include <conio.h>
+#include <iostream>
+using namespace System;
+using namespace std;           
+
+int main()
+{
+	int A,B,C;
+
+	cout << "Introduzca A: ";
+	cin >> A;
+	cout << "Introduzca B: ";
+	cin >> B;
+	cout << "Introduzca C: ";
+	cin >> C;
+	int result1 = (A - C)*B / 2;
+	int result2 = C*B;
+	int y = result1 + result2;
+	cout << "El area total es:" << y;
+
+	_getch();               
+    return 0;
+}

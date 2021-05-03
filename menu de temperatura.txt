@@ -1,0 +1,103 @@
+#include "stdafx.h"
+#include <iostream>
+#include <conio.h>
+
+using namespace System;
+using namespace std;
+
+void promedio();
+void mayortemp();
+void menortemp();
+void temp_ascendente();
+
+void main()
+{
+	int opcion, *temperaturas;
+	
+	do
+	{
+		cout << "*************************MENU*************************" << endl;
+		cout << "*   1. Generar temperaturas                          *" << endl;
+		cout << "*   2. Encontrar la temperatura promedio             *" << endl;
+		cout << "*   3. Encontrar la mayor temperatura                *" << endl;
+		cout << "*   4. Encontrar la menor temperatura                *" << endl;
+		cout << "*   5. Ordenar las temperaturas de forma ascendente  *" << endl;
+		cout << "******************************************************" << endl;
+		cin >> opcion;
+	} while (opcion<1 || opcion>5);
+
+	Console::SetWindowSize(55, 50);
+	temperaturas = new int[30];
+	switch (opcion)
+	{
+	case 1:
+		{
+			
+			Random x;
+			for (int i = 1; i <= 30; i++)
+				{
+			temperaturas[i] = x.Next(8, 18);
+				}
+			for (int i = 1; i <= 30; i++)
+				{
+			cout << "Temperatura " << i << " es: " << temperaturas[i] << endl;
+				}
+			main();
+		}
+		break;
+	case 2: promedio();
+		break;
+	case 5:
+		int aux;
+		cout << temperaturas[1] << endl;
+		for (int i = 1; i<=30 - 1; i++)
+		{
+		for (int j = i - 1; j<=30; j++)
+			if (temperaturas[i]>temperaturas[j])
+			{
+				aux = temperaturas[i];
+				temperaturas[i] = temperaturas[j];
+				temperaturas[j] = aux;
+			}
+		
+		}
+		for (int i = 1; i <= 30; i++)
+		{
+			cout << "temperatura: " << i << " es :" << temperaturas[i] << endl;
+		}
+
+	default:
+		break;
+	}
+	_getch();
+	
+}
+
+void promedio()
+{
+	int temperaturas;
+	cout << "temp" << temperaturas << endl;
+	int prom = 0;
+	for (int i = 1; i <=30; i++)
+	{
+		
+	}
+	prom /= 30;
+	cout << "El promedio de temperaturas es: " << prom << endl;
+}
+void mayortemp()
+{
+	_getch();
+}
+void menortemp()
+{
+
+
+
+	_getch();
+}
+void temp_ascendente()
+{
+
+	_getch();
+}

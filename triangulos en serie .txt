@@ -1,0 +1,33 @@
+#include "conio.h"
+#include "stdio.h"
+#include "iostream"
+
+using namespace std;
+
+int main()
+{
+	int n;
+	int i;
+	do
+	{
+		cout<<"Ingrese n: ";
+		cin>>n;
+	} while (n<1 || n>10);
+
+	for (i = 1; i <= 5; i++) // filas
+	{
+		for (int j =1; j <= n; j++) // triangulos
+		{
+			for (int k = 1; k <= 5; k++) // columnas
+			{
+				if (k==i || k==1 || i==5) // IMPRIMIR UN ASTERISCO SI  k==i (si mi columna es igual a mi fila)|O| k==1 si estoy en la columna 1 |O| i==5 si estoy en la última fila
+					cout<<"*";
+				else
+					cout<<" ";
+			}
+			cout<<"  ";
+		}
+		cout<<endl;
+	}
+	_getch();
+}

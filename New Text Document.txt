@@ -1,0 +1,22 @@
+#include "stdafx.h"           
+#include <conio.h>
+#include <iostream>
+using namespace System;
+using namespace std;           
+
+int main()
+{
+	int num1, num2;
+
+	cout << "Introduzca dos numeros";
+
+	cin >> num1 >> num2;
+    
+	int resultado = num1 + num2;
+
+	cout << "El resultado es: " << resultado;
+
+
+	_getch();               
+    return 0;
+}

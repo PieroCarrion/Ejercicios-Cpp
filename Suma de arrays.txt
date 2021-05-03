@@ -1,0 +1,42 @@
+#include "stdafx.h"
+#include <iostream>
+#include <conio.h>
+
+using namespace System;
+using namespace std;
+
+int main()
+{
+	int valores1[7], valores2[7];
+	Random x;
+	cout << "Posicion\t";
+	for (int i = 1; i <=7; i++)
+	{
+		cout <<i << "\t";
+	}
+	cout << endl << endl;
+	cout << "A\t\t";
+	for (int i = 1; i <= 7; i++)
+	{
+		valores1[i] = x.Next(-200, 200);
+		cout << valores1[i] << "\t";
+	}
+	cout << endl;
+	cout << "B\t\t";
+	for (int i = 1; i <= 7; i++)
+	{
+		valores2[i] = x.Next(-200, 200);
+		cout << valores2[i] << "\t";
+	}
+	cout << endl;
+	cout << "Suma\t\t";
+	for (int i = 1; i <= 7; i++)
+	{
+		int sum = 0;
+		sum = valores1[i] + valores2[i];
+		cout << sum << "\t";
+	}
+	getch();
+	return 0;
+}
+

@@ -1,0 +1,40 @@
+#include"stdafx.h"
+#include "iostream"
+#include "stdio.h"
+#include "string"
+#include <conio.h>
+using namespace System;
+using namespace std;
+
+
+int main()
+{
+	int arr[2], m, n, numero;
+	cout << "Ingresar numero" << endl; cin >> n;
+	//123
+	while ()
+	{
+
+	}
+	for (int i = 0; i < length; i++)
+	{
+		for (int j = 0; j < length; j++)
+		{
+
+		}
+	}
+	arr[0] = (n) / 10*10;
+	arr[1] = (n-(100*arr[0])) / 10;
+	arr[2] = (n - (100*arr[0] + 10*arr[1]));
+
+
+
+
+
+	cout << arr[0] << endl << arr[1] << endl << arr[2];
+
+
+	_getch();
+	return 0;
+}
+

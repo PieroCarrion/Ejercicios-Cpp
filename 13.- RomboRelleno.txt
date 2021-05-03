@@ -1,0 +1,42 @@
+
+#include "stdio.h"
+#include "conio.h"
+#include "iostream"
+
+using namespace std;
+
+int main()
+{
+	int n;
+	int espacios;
+	int cantidad;
+	cout<<"Ingrese n: ";
+	cin>>n;
+	espacios=n-1;
+
+	for (int i = 0; i < n*2; i++,cout<<"\n")
+	{
+		for (int j = 0; j < n+cantidad; j++)
+		{
+			if(j<espacios)
+			{
+				cout<<" ";
+			}
+			else
+				cout<<"*";
+		}
+		if(i<n-1)
+		{
+			cantidad++;
+			espacios--;
+		}
+		else
+		{
+			cantidad--;
+			espacios++;
+		}
+	}
+
+	_getch();
+
+}

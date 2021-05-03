@@ -1,0 +1,39 @@
+#include "stdafx.h"
+#include <iostream>
+#include <conio.h>
+#include <locale.h>
+
+using namespace System;
+using namespace std;
+
+void main()
+{
+ 	setlocale(LC_ALL, "spanish");
+	int *VNotas, maximo = 0,menor=20;
+	unsigned numNotas;
+
+	Random r;
+	cout << "Ingrese el número de notas que desea ingresar: " << "\n"; cin >> numNotas;
+	VNotas = new int[numNotas];
+	
+	for (unsigned i = 0; i < numNotas; i++)
+	{
+		VNotas[i] = r.Next(1, 21);
+		if (VNotas[i] < menor)
+		{
+			menor = VNotas[i];
+		};
+		if (VNotas[i] > maximo) 
+		{
+			maximo = VNotas[i];
+		};
+	}
+
+	for (unsigned i = 0; i < numNotas; i++)
+	{
+		cout << "Nota " << i + 1 << " es : " << VNotas[i] << "\n";
+	}
+	cout << "La nota mayor es: " << maximo << endl;
+	cout <<"La nota menor es: "<< menor;
+	_getch();
+}

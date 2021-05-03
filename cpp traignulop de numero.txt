@@ -1,0 +1,41 @@
+
+#include "stdafx.h"
+#include <iostream>
+#include <conio.h>
+
+using namespace System;
+using namespace std;
+
+int main()
+{
+	int n = 10-1;
+	int n1=1,n2=0;
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j <= 2*n; j++)
+		{
+			if (j>=n-i&&j<=n+i)
+			{
+				if (j<=n)
+				{
+					cout << n1;
+					n1++;
+				}
+				else 
+				{
+					n2--;
+					cout << n2;	
+				}
+			}
+			else
+			{
+				cout << " ";
+			}
+		}
+		n2 = n1;
+		n1 = 1;
+		cout << endl;
+	}
+	getch();
+    return 0;
+}

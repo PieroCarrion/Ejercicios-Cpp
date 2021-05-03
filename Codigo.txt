@@ -1,0 +1,35 @@
+#include "stdafx.h"
+#include <iostream>
+#include <conio.h>
+
+using namespace System;
+using namespace std;
+
+int main()
+{
+	int ejey = 312312; //Este es un numero que puse para disimular el infinito, pero
+	//creo que en el examen, no deberia poner un numero(por eso mi duda).
+	int **mensaje = new int*[ejey];
+	int ncifras;
+	for (int i = 0; i < ejey; i++)
+	{
+		mensaje[i] = new int[20];
+	}
+		Random cifras;
+		for (int i = 0; i <ejey; i++)
+		{
+			ncifras = cifras.Next(10, 21);
+			Random num;
+			for (int j = 0; j < ncifras; j++)
+			{
+				do
+				{
+					mensaje[i][j] = num.Next(0, 6);
+				} while (mensaje[i][j] != 0 && mensaje[i][j] != 2 && mensaje[i][j] != 5);
+				cout << mensaje[i][j];
+			}
+			cout << endl;
+		}
+	_getch();
+    return 0;
+}

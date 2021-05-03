@@ -1,0 +1,26 @@
+#include "stdafx.h"           
+#include <conio.h>
+#include <iostream>
+using namespace System;
+using namespace std;           
+
+int main()
+{
+	int A, L, B,p;
+
+	cout << "Introduzca A: ";
+	cin >> A;
+	cout << "Introduzca L: ";
+	cin >> L;
+	cout << "Introduzca B: ";
+	cin >> B;
+	cout << "Introduzca el precio por metro cubico";
+	cin >> p;
+	int result1 = A*L*B;
+	int v = result1*p;
+
+	cout << "El pago seria de: " << v;
+
+	_getch();               
+    return 0;
+}

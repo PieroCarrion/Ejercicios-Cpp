@@ -1,0 +1,84 @@
+#include "stdafx.h"
+#include <conio.h>
+#include<iostream>
+
+using namespace System;
+using namespace std;
+int personas = 10;
+void hallar_mayor(int *pesos);
+void personas_delgadas(int *pesos);
+void personas_mediana(int *pesos);
+void personas_gruesa(int *pesos);
+int main()
+{
+	int pesos[10];
+	Random x;
+	for (int i = 0; i < personas; i++)
+	{
+		pesos[i] = x.Next(30, 101);
+	}
+	for (int i = 0; i < personas; i++)
+	{
+		cout << "Peso " << i + 1 << " es " << pesos[i] << endl;
+
+	}
+	cout << endl;
+	hallar_mayor(pesos);
+	personas_delgadas(pesos);
+	personas_mediana(pesos);
+	personas_gruesa(pesos);
+	
+	getch();
+    return 0;
+}
+void hallar_mayor(int *pesos)
+{
+	int mayor = pesos[0];
+	for (int i= 0; i <personas; i++)
+	{
+		if (pesos[i]>=mayor)
+		{
+			mayor = pesos[i];
+		}
+	}
+	cout << "EL mayor es" << mayor << endl;
+
+}
+void personas_delgadas(int *pesos)
+{
+	int contador = 0;
+	for (int i = 0; i < personas; i++)
+	{
+		if (pesos[i]<53)
+		{
+			contador++;
+		}
+	}
+	cout << "Hay " << contador << " personas de contextura delgada" << endl;
+
+}
+void personas_mediana(int *pesos)
+{
+	int contador = 0;
+	for (int i = 0; i < personas; i++)
+	{
+		if (pesos[i]>=53&&pesos[i]<=60)
+		{
+			contador++;
+		}
+	}
+	cout << "Hay " << contador << " personas de contextura mediana" << endl;
+}
+void personas_gruesa(int *pesos)
+{
+	int contador = 0;
+	for (int i = 0; i < personas; i++)
+	{
+		if (pesos[i]>60)
+		{
+			contador++;
+		}
+	}
+	cout << "Hay " << contador << " personas de contextura gruesa"<<endl;
+	
+}
